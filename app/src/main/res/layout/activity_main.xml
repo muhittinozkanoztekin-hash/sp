@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#111318">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/statusText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cihaz aranıyor... (UDP 8998 dinleniyor)"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            android:paddingBottom="16dp" />
+
+        <!-- Power / Mute / Menu -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="12dp">
+            <Button android:id="@+id/btnPower" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="⏻" android:layout_marginEnd="4dp"/>
+            <Button android:id="@+id/btnMute" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="🔇" android:layout_marginEnd="4dp"/>
+            <Button android:id="@+id/btnMenu" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="Menü"/>
+        </LinearLayout>
+
+        <!-- Direction pad -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center">
+            <Button android:id="@+id/btnUp" android:layout_width="72dp" android:layout_height="wrap_content" android:text="▲"/>
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center">
+            <Button android:id="@+id/btnLeft" android:layout_width="72dp" android:layout_height="wrap_content" android:text="◀"/>
+            <Button android:id="@+id/btnOk" android:layout_width="72dp" android:layout_height="wrap_content" android:text="OK" android:layout_marginStart="4dp" android:layout_marginEnd="4dp"/>
+            <Button android:id="@+id/btnRight" android:layout_width="72dp" android:layout_height="wrap_content" android:text="▶"/>
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center" android:layout_marginBottom="12dp">
+            <Button android:id="@+id/btnDown" android:layout_width="72dp" android:layout_height="wrap_content" android:text="▼"/>
+        </LinearLayout>
+
+        <!-- Back / Exit / Info -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="12dp">
+            <Button android:id="@+id/btnReturn" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="Geri" android:layout_marginEnd="4dp"/>
+            <Button android:id="@+id/btnExit" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="Çıkış" android:layout_marginEnd="4dp"/>
+            <Button android:id="@+id/btnInfo" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="Bilgi"/>
+        </LinearLayout>
+
+        <!-- Channel / Volume -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="12dp">
+            <LinearLayout android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginEnd="8dp">
+                <Button android:id="@+id/btnChUp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="KANAL +"/>
+                <Button android:id="@+id/btnChDown" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="KANAL -"/>
+            </LinearLayout>
+            <LinearLayout android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:orientation="vertical">
+                <Button android:id="@+id/btnVolUp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="SES +"/>
+                <Button android:id="@+id/btnVolDown" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="SES -"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- EPG / Fav -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="12dp">
+            <Button android:id="@+id/btnEpg" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="EPG" android:layout_marginEnd="4dp"/>
+            <Button android:id="@+id/btnFav" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="Favoriler"/>
+        </LinearLayout>
+
+        <!-- Numeric keypad -->
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="3">
+            <Button android:id="@+id/btn1" android:text="1" android:layout_columnWeight="1" android:layout_gravity="fill_horizontal"/>
+            <Button android:id="@+id/btn2" android:text="2" android:layout_columnWeight="1" android:layout_gravity="fill_horizontal"/>
+            <Button android:id="@+id/btn3" android:text="3" android:layout_columnWeight="1" android:layout_gravity="fill_horizontal"/>
+            <Button android:id="@+id/btn4" android:text="4" android:layout_columnWeight="1" android:layout_gravity="fill_horizontal"/>
+            <Button android:id="@+id/btn5" android:text="5" android:layout_columnWeight="1" android:layout_gravity="fill_horizontal"/>
+            <Button android:id="@+id/btn6" android:text="6" android:layout_columnWeight="1" android:layout_gravity="fill_horizontal"/>
+            <Button android:id="@+id/btn7" android:text="7" android:layout_columnWeight="1" android:layout_gravity="fill_horizontal"/>
+            <Button android:id="@+id/btn8" android:text="8" android:layout_columnWeight="1" android:layout_gravity="fill_horizontal"/>
+            <Button android:id="@+id/btn9" android:text="9" android:layout_columnWeight="1" android:layout_gravity="fill_horizontal"/>
+            <Button android:id="@+id/btn0" android:text="0" android:layout_columnWeight="1" android:layout_gravity="fill_horizontal"/>
+        </GridLayout>
+
+    </LinearLayout>
+</ScrollView>
